@@ -1,0 +1,476 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-size: 14px;
+    color: #333;
+}
+
+
+/* 头部 */
+
+.top {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #ccc;
+}
+
+.top .logo {
+    width: 60px;
+    height: 48px;
+    float: left;
+}
+
+.logo a img {
+    width: 60px;
+}
+
+.top .logotext {
+    font-size: 24px;
+    color: #000;
+    height: 60px;
+    margin-left: 20px;
+    line-height: 60px;
+    font-weight: bold;
+    float: left;
+}
+
+.top-righta {
+    float: right;
+    margin: 20px 10px;
+}
+
+.top-righta a {
+    color: #000;
+}
+
+
+/* 内容区头部 */
+
+.center {
+    width: 1160px;
+    padding: 0 15px;
+    margin: 0 auto;
+    height: 500px;
+}
+
+.main {
+    width: 1130px;
+}
+
+.main .cart-steps {
+    margin: 20px 0;
+}
+
+.cart-steps table .step-item {
+    width: 28%;
+    background-size: 100% 100%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+    color: #767676;
+}
+
+.step-item i {
+    width: 22px;
+    margin-right: 8px;
+    margin-left: -25px;
+    font-style: normal;
+}
+
+.step-1 {
+    color: #fff !important;
+    background: url(../img/cart-in.png) no-repeat;
+}
+
+.step-2 {
+    background: url(../img/cart-out-1.png) no-repeat;
+}
+
+
+/* 内容中间 */
+
+.cart-content {
+    width: 1130px;
+    min-height: 330px;
+    border: 1px solid #efefef;
+}
+
+.cart-content .content-t {
+    width: 100%;
+}
+
+.content-t li {
+    float: left;
+    font-weight: 400;
+    color: #a5a5a5;
+    text-align: center;
+    height: 37px;
+    line-height: 37px;
+    background: #f2f2f2;
+}
+
+
+/* 渲染部分 */
+
+.content-c {
+    width: 100%;
+    color: #666;
+}
+
+.goodslist {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    border-bottom: 1px solid #ccc;
+}
+
+.goodslist li {
+    height: 124px;
+    text-align: center;
+}
+
+.imgt {
+    padding-top: 10px;
+}
+
+.imgt .imgbox {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    float: left;
+}
+
+.imgbox img {
+    width: 100%;
+}
+
+.imgt .p-title {
+    width: 220px;
+    height: 36px;
+    float: left;
+    margin-left: 10px;
+    padding-top: 30px;
+}
+
+.p-title a {
+    width: 220px;
+    height: 36px;
+    color: #767676;
+}
+
+.p-title a:hover {
+    color: #337ab7;
+    text-decoration: underline;
+}
+
+.num-box {
+    width: 70px;
+    height: 20px;
+    margin: 50px auto;
+}
+
+.num-box span {
+    width: 20px;
+    height: 20px;
+    display: block;
+    border: 1px solid #ccc;
+    float: left;
+    cursor: pointer;
+}
+
+.num-box input {
+    width: 30px;
+    height: 20px;
+    display: block;
+    text-align: center;
+    line-height: 20px;
+    float: left;
+    outline: none;
+    border: 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.yk {
+    position: relative;
+}
+
+.yk .yl {
+    width: 74px;
+    height: 20px;
+    background: #ef4521;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+    left: 53px;
+    top: 72px;
+}
+
+.xj {
+    color: #FE2000;
+}
+
+.content-f {
+    width: 100%;
+    height: 168px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.content-f .right-f {
+    width: 368px;
+    height: 108px;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    padding-top: 15px;
+}
+
+.right-f ul {
+    width: 100%;
+}
+
+.right-f ul li {
+    text-align: center;
+}
+
+.right-f ul .one {
+    width: 100%;
+    height: 32px;
+}
+
+.right-f ul .one .hon {
+    font-size: 20px;
+}
+
+.right-f ul .two {
+    width: 100%;
+    height: 40px;
+}
+
+.right-f ul .two .hon {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.right-f ul li .hon {
+    color: orangered;
+}
+
+.content-f .button-f {
+    width: 368px;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.button-f a {
+    display: block;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 10px;
+    float: left;
+}
+
+.gw {
+    border: 1px solid #dddddd;
+    color: #767676;
+}
+
+.js {
+    color: #fff;
+    background: orangered;
+}
+
+.the-footer {
+    width: 100%;
+    height: auto;
+}
+
+.the-important {
+    width: 100%;
+    margin-top: 30px;
+    background: #f9f9f9;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.the-important .t {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.phone {
+    width: 50%;
+    padding: 0 15px;
+}
+
+.phone .pic {
+    width: 70px;
+    margin: 0 auto;
+}
+
+.phone img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.phone .time {
+    padding: 10px 0;
+    color: #767676;
+    font-size: 14px;
+    text-align: center;
+}
+
+.phone h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 14px;
+    color: #767676;
+    font-weight: bold;
+}
+
+.t {
+    display: flex;
+}
+
+.t .footer-logo {
+    width: 50%;
+    padding: 0 15px;
+}
+
+.footer-logo img {
+    width: 240px;
+}
+
+.footer-logo a {
+    display: block;
+    margin: 0 auto;
+    width: 240px;
+}
+
+.the-footer .footer-down {
+    width: 100%;
+    height: 420px;
+    background: #000;
+}
+
+.footer-down .footer-c {
+    width: 900px;
+    margin: 0 auto;
+    padding-top: 60px;
+    color: #707070;
+}
+
+.footer-c .footer-t {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #373737;
+}
+
+.footer-c .footer-d {
+    font-size: 12px;
+}
+
+.footer-t {
+    display: flex;
+}
+
+.footer-t .t-left {
+    display: flex;
+    width: 70%;
+    color: #707070;
+}
+
+.t-left .maxArticle {
+    width: 20%;
+}
+
+.maxArticle .maxTitle {
+    color: #767676;
+}
+
+.tis {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.maxArticle li {
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.maxArticle li a {
+    color: #767676;
+}
+
+.footer-t .t-right {
+    width: 30%;
+}
+
+.t-right .footer-ewm {
+    width: 100%;
+    display: flex;
+}
+
+.footer-ewm div {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.footer-ewm img {
+    width: 100%;
+}
+
+.footer-ewm p {
+    font-size: 12px;
+}
+
+.footer-ewm .t {
+    margin: 10px 0 0;
+}
+
+.t-right .xl {
+    height: 40px;
+    line-height: 40px;
+    margin-top: 20px;
+}
+
+.xl-t {
+    width: 200px;
+    margin: 0 auto;
+    border: 1px solid #707070;
+    border-radius: 25px;
+    padding: 0 10px;
+    color: #707070;
+    text-align: center;
+    font-size: 12px;
+}
+
+.xl-t .iconfont {
+    font-size: 19px;
+}

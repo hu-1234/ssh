@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.top {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-self: start;
+}
+
+.top .logo {
+    width: 100px;
+    height: 80px;
+}
+
+.top .logotext {
+    font-size: 28px;
+    margin-left: 32px;
+    color: #000;
+    height: 70px;
+    line-height: 70px;
+}
+
+.content {
+    width: 100%;
+    height: 600px;
+    background: url(../img/reg.jpg) no-repeat left top;
+}
+
+.content-c {
+    width: 1200px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.content-c .registrybox {
+    position: absolute;
+    background: #ffffff;
+    top: 65px;
+    right: 0;
+    width: 400px;
+    height: 350px;
+    z-index: 1;
+    padding: 35px 60px;
+}
+
+.registrybox .sbox {
+    width: 320px;
+    height: 290px;
+    position: relative;
+}
+
+.sbox-title {
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sbox a {
+    text-decoration: none;
+    display: block;
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+    color: #000;
+    cursor: pointer;
+}
+
+.sbox form {
+    width: 100%;
+    height: 70%;
+    margin-top: 10px;
+}
+
+form input {
+    width: 90%;
+    border: 1px solid #999;
+    height: 35px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    color: #ccc;
+}
+
+form .username {
+    margin: 20px 0 50px 0;
+}
+
+form .submit {
+    background: orangered;
+    color: #fff;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.footer {
+    width: 100%;
+    height: 60px;
+    background: #000;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+}
+
+.footer-w {
+    padding-top: 20px;
+    padding-left: 20px;
+    width: 80%;
+    height: 60px;
+    margin: auto;
+    color: #999;
+    font-size: 13px;
+}
