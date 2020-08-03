@@ -4,12 +4,12 @@ define([], function() {
             (function($) {
 
                 $.ajax({
-                    url: 'http://127.0.0.1/practice/bm1/php/list.php',
+                    url: 'http://127.0.0.1/practice/bm1/php/data.php',
                     dataType: 'json'
                 }).done(function(data) {
                     const $goodUl = $('.productList ul');
                     let str = '';
-                    $.each(data, function(index, value) {
+                    $.each(data.data3, function(index, value) {
                         str += `<li>
                         <a href="javascript:;"><img src="${value.url}" alt=""></a>
                         <a href="javascript:;" class="gtitle"><span>立减</span>${value.title}</a>
