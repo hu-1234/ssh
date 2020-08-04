@@ -205,45 +205,50 @@ define([], function() {
                 const $twoBox = $('.main-banner .two-box');
 
                 $.ajax({
-                        url: 'http://127.0.0.1/practice/bm1/php/data.php',
-                        dataType: 'json'
-                    }).done(function(data) {
-                        let $str = '';
-                        let $arr = '';
-                        //渲染第一个ul
-                        $.each(data.data1, function(index, value) {
-                            $str += `
-                        <a href="javascript:;">
+                    url: 'http://127.0.0.1/practice/bm1/php/data.php',
+                    dataType: 'json'
+                }).done(function(data) {
+                    let $str = '';
+                    let $arr = '';
+                    //渲染第一个ul
+                    $.each(data.data1, function(index, value) {
+                        $str += `
                         <li>
-                            <img src="${value.url}" alt="">
+                        <a href="javascript:;">
+                            <img src="${value.url}" alt="" />
                             <p>${value.title}</p>
                             <div class="money-now">
                                 <span class="now">${value.price}</span>
                                 <span class="discount">￥${value.discountprice}</span>
                             </div>
+                        </a>
                         </li>
-                    </a>
+                    
                         `;
-                        })
-                        $firstBox.html($str);
-                        //渲染第二个ul
-                        $.each(data.data2, function(index, value) {
-                            $arr += `
-                        <a href="javascript:;">
+
+                    })
+                    $firstBox.html($str);
+
+                    //渲染第二个ul
+                    $.each(data.data2, function(index, value) {
+                        $arr += `
                         <li>
+                        <a href="javascript:;">
                             <img src="${value.url}" alt="">
                             <p>${value.title}</p>
                             <div class="money-now">
                                 <span class="now">${value.price}</span>
                                 <span class="discount">￥${value.discount}</span>
                             </div>
+                            </a>
                         </li>
-                    </a>
+                    
                         `;
-                        })
-                        $twoBox.html($arr);
                     })
-                    //点击下面轮播小圆圈事件，左键头右箭头
+                    $twoBox.html($arr);
+                });
+
+                //点击下面轮播小圆圈事件，左键头右箭头
                 const $l = $('.best-sell-box #le');
                 const $r = $('.best-sell-box #ri');
                 const $div = $('.qiehuan div');
@@ -290,7 +295,44 @@ define([], function() {
                     })
                 })
 
+
+
+                // 显示蒙板
+                const $swiperLi = $('.swiper-wrap li');
+
+                const $menban = $('.swiper-wrap li .menban');
+
+
+                const $swiperL = $('.aa li');
+                const $men = $('.aa li .menban');
+
+                $swiperLi.on('mouseover', function() {
+                    $menban.eq($(this).index()).css({
+                        display: 'block'
+                    })
+
+                })
+                $swiperLi.on('mouseout', function() {
+                    $menban.eq($(this).index()).css({
+                        display: 'none'
+                    })
+                })
+                $swiperL.on('mouseover', function() {
+                    $men.eq($(this).index()).css({
+                        display: 'block'
+                    })
+
+                })
+                $swiperL.on('mouseout', function() {
+                    $men.eq($(this).index()).css({
+                        display: 'none'
+                    })
+                })
+
+
             })(jQuery)
+
+
         }
     }
 })

@@ -368,9 +368,8 @@ form .fdj {
 
 .the-center {
     width: 100%;
-    min-height: 2500px;
+    min-height: 2650px;
     padding-top: 50px;
-    overflow: hidden;
 }
 
 
@@ -379,7 +378,7 @@ form .fdj {
 .the-center .container {
     width: 1100px;
     margin: 0 auto;
-    min-height: 2500px;
+    min-height: 2650px;
 }
 
 
@@ -387,7 +386,7 @@ form .fdj {
 
 .container .left-nav {
     width: 172px;
-    height: 350px;
+    overflow: hidden;
     float: left;
 }
 
@@ -405,6 +404,7 @@ form .fdj {
     top: 0;
     font-size: 15px;
     color: #c7c7c7;
+    cursor: pointer;
 }
 
 .nav-item .icon-shang {
@@ -414,15 +414,10 @@ form .fdj {
 .left-nav .nav-t {
     width: 142px;
     margin-left: 20px;
-    display: none;
 }
 
 .left-nav .nav-t a {
     color: #999;
-}
-
-.left-nav .nav-t .ls {
-    color: blue;
 }
 
 .left-nav .nav-t li {
@@ -433,12 +428,16 @@ form .fdj {
     font-size: 12px;
 }
 
+.left-nav .nav-t li:hover {
+    color: aquamarine;
+}
+
 .container .right-box {
     width: 856px;
-    min-height: 2500px;
     float: left;
     margin-top: 20px;
     margin-left: 72px;
+    position: relative;
 }
 
 
@@ -447,7 +446,6 @@ form .fdj {
 .right-box .right-top {
     width: 856px;
     height: 285px;
-    background: red;
 }
 
 
@@ -472,10 +470,14 @@ form .fdj {
     text-align: center;
     line-height: 20px;
     cursor: pointer;
+    position: relative;
 }
 
 .btn i {
     margin-left: -5px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
 }
 
 .right-sort label {
@@ -498,13 +500,13 @@ form .fdj {
 
 .productList {
     width: 856px;
-    min-height: 2300px;
     margin-top: 22px;
-    position: relative;
+    overflow: hidden;
 }
 
 .productList ul {
     width: 856px;
+    overflow: hidden;
 }
 
 .productList ul li {
@@ -540,6 +542,10 @@ form .fdj {
     margin-bottom: 10px;
 }
 
+.productList ul li .gtitle:hover {
+    text-decoration: underline;
+}
+
 .productList ul li .gtitle span {
     background-color: red;
     color: #fff;
@@ -552,38 +558,6 @@ form .fdj {
     color: #e72b1e;
     padding: 5px 100px;
     margin: auto;
-}
-
-.productList .feye {
-    width: 100%;
-    height: 43px;
-    padding-left: 33.3%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-size: 12px;
-}
-
-.feye a {
-    float: left;
-    display: inline;
-    padding: 5px 10px;
-    margin-right: 5px;
-    border-radius: 3px;
-    border: 1px solid #333;
-    background-color: #FFF;
-    color: #333
-}
-
-.feye span {
-    float: left;
-    display: inline;
-    padding: 5px 10px;
-    margin-right: 5px;
-    border-radius: 3px;
-    border: 1px solid #333;
-    background-color: gray;
-    color: #fff;
 }
 
 
