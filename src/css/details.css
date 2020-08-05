@@ -388,17 +388,18 @@ form .fdj {
     border: 1px solid #ccc;
 }
 
+.left-box .product-pic img {
+    width: 100%;
+}
+
 .left-box .product-thumb {
-    width: 599px;
+    width: 600px;
     margin-top: 10px;
-    position: relative;
     height: 100px;
 }
 
 .product-thumb .left-j,
 .product-thumb .right-j {
-    position: absolute;
-    top: 0;
     margin-top: 5px;
     width: 16px;
     background-color: #eee;
@@ -411,66 +412,88 @@ form .fdj {
 .product-thumb .thumbList {
     width: 568px;
     height: 100px;
-    position: absolute;
-    left: 16px;
-    top: 0;
+    float: left;
+    position: relative;
+    overflow: hidden;
 }
 
-.thumbList li {
+.product-thumb .right-j {
+    float: left;
+}
+
+.product-thumb .left-j {
+    float: left;
+}
+
+.thumbList ul {
+    width: 800px;
+    height: 100px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.thumbList ul li {
     float: left;
     width: 100px;
     height: 100px;
     margin-right: 5px;
     border-radius: 4px;
+    padding: 6px;
+    border: 1px solid #ddd;
+    position: relative;
 }
 
-.product-thumb .left-j {
-    left: 0;
+.thumbList ul li.active {
+    border: 1px solid #f60;
 }
 
-.product-thumb .right-j {
-    right: 0;
+.thumbList li img {
+    widows: 88px;
+    height: 88px;
+    display: block;
 }
 
 .content-center .right-box {
     width: 540px;
-    height: 819px;
-    border: 1px solid #ccc;
+    height: 719px;
     float: left;
     margin-left: 20px;
     padding: 10px;
+    padding-top: 50px;
 }
 
 .right-box h1 {
     color: #333;
-    line-height: 24px;
     font-weight: bold;
-}
-
-.datail-title {
     font-size: 24px;
 }
 
-.s-title {
-    color: #8c8c8c;
-    margin-top: 10px;
-    font-size: 16px;
-}
-
 .right-box .details-price {
+    margin-top: 60px;
     width: 100%;
     height: 192px;
-    border: 1px solid #ccc;
+    background: #f8f8f8
 }
 
 .details-price .leval {
     width: 100%;
-    border-bottom: 1px solid #eeeeee;
     padding: 15px 25px;
+    border-bottom: 1px solid #eeeeee
 }
 
 .details-price .leval span {
-    font-size: 35px;
+    font-size: 30px;
+    color: #e52d1d;
+}
+
+.details-price .leval .hui {
+    font-size: 16px;
+    color: #858585;
+}
+
+.details-price .leval .zhekou {
+    text-decoration: line-through;
 }
 
 .details-price .three img {
@@ -515,6 +538,10 @@ form .fdj {
     height: 50px;
     text-align: center;
     line-height: 50px;
+    float: left;
+    display: block;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
 }
 
 .right-box .num {

@@ -215,7 +215,7 @@ define([], function() {
                         $str += `
                         <li>
                         <a href="javascript:;">
-                            <img src="${value.url}" alt="" />
+                            <img data-original="${value.url}" alt="" class="lazy" width="238"  height="238">
                             <p>${value.title}</p>
                             <div class="money-now">
                                 <span class="now">${value.price}</span>
@@ -228,8 +228,11 @@ define([], function() {
 
                     })
                     $firstBox.html($str);
-
-                    //渲染第二个ul
+                    //懒加载 
+                    $(function() {
+                            $('img.lazy').lazyload({ effect: "fadeIn" });
+                        })
+                        //渲染第二个ul
                     $.each(data.data2, function(index, value) {
                         $arr += `
                         <li>
