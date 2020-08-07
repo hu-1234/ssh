@@ -2,6 +2,42 @@ define([], function() {
     return {
         init: function() {
             (function($) {
+
+                const $set = $('.right-nav .set');
+                $set.on('click', function() {
+                    $('html, body').animate({
+                        scrollTop: '0px'
+                    }, 'fast')
+                });
+
+
+                // 二级导航
+                const $aLi = $('.navList li');
+                const $hover = $('.nav-hover');
+                $aLi.hover(function() {
+                    $hover.css({
+                        'display': 'block'
+                    })
+                    $hover.hover(function() {
+                        $hover.css({
+                            'display': 'block'
+                        })
+                    }, function() {
+                        $hover.css({
+                            'display': 'none'
+                        })
+                    })
+                }, function() {
+                    $hover.css({
+                        'display': 'none'
+                    })
+                })
+
+
+
+
+
+
                 let $search = location.search;
                 let $num = $search.substr(5);
                 $.ajax({

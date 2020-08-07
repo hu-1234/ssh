@@ -25,6 +25,79 @@ body {
 }
 
 
+/* 右边固定导航 */
+
+.right-nav {
+    width: 60px;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    right: 0px;
+    z-index: 3;
+    margin-top: -6%;
+}
+
+.right-nav li {
+    width: 60px;
+    height: 60px;
+    background: black;
+    margin-bottom: 2px;
+    cursor: pointer;
+    padding: 8px;
+    position: relative;
+}
+
+.right-nav .ewm-l {
+    width: 156px;
+    height: 186px;
+    position: absolute;
+    right: 61px;
+    top: -63px;
+    opacity: 0.9;
+    background: #333;
+    display: none;
+}
+
+.ewm-l div {
+    width: 110px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.ewm-l p {
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.right-nav li a {
+    display: block;
+    width: 90%;
+    height: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.right-nav li img {
+    width: 100%;
+    margin: auto;
+}
+
+.ewm-l div img {
+    width: 80%;
+    margin-left: 10px;
+}
+
+.gzwx:hover #gz {
+    display: block;
+}
+
+.yl:hover #gp {
+    display: block;
+}
+
+
 /* 头部 */
 
 .top {
@@ -117,6 +190,7 @@ body {
 
 .cart-content .content-t {
     width: 100%;
+    overflow: hidden;
 }
 
 .content-t li {

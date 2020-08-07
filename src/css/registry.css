@@ -55,8 +55,8 @@ body {
 }
 
 .registrybox .sbox {
-    width: 320px;
-    height: 330px;
+    width: 288px;
+    height: 280px;
 }
 
 .sbox-title {
@@ -75,14 +75,22 @@ form input {
     width: 90%;
     border: 1px solid #999;
     height: 35px;
-    margin-bottom: 15px;
     padding-left: 10px;
+}
+
+form span {
+    display: block;
+    width: 90%;
+    height: 30px;
+    margin: 5px 0px;
+    padding-left: 10px;
+    font-size: 13px;
 }
 
 form .submit {
     background: orangered;
     color: #fff;
-    margin-top: 30px;
+    margin-top: 10px;
     cursor: pointer;
 }
 

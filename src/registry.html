@@ -26,12 +26,15 @@
                     <div class="sbox-title">
                         快速注册
                     </div>
-                    <form action="">
-                        <input type="text" name="username" placeholder="用户名">
-                        <input type="text" name="password" placeholder="密码">
-                        <input type="text" name="repass" placeholder="确认密码">
-                        <input type="text" name="email" placeholder="电子邮箱">
-                        <input type="text" name="tel" placeholder="手机号">
+                    <form action="http://127.0.0.1/practice/BMitem/php/registry.php" method="POST" class="forma">
+                        <input type="text" name="username" placeholder="用户名" class="username" autocomplete="off">
+                        <span></span>
+                        <input type="text" name="password" placeholder="密码" class="password" autocomplete="off">
+                        <span></span>
+                        <input type="text" name="email" placeholder="电子邮箱" class="email">
+                        <span></span>
+                        <input type="text" name="tel" placeholder="手机号" class="tel">
+                        <span></span>
                         <input type="submit" name="submit" value="立即注册" class="submit">
                     </form>
                 </div>

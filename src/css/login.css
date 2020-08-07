@@ -43,7 +43,7 @@ body {
     position: relative;
 }
 
-.content-c .registrybox {
+.content-c .loginbox {
     position: absolute;
     background: #ffffff;
     top: 65px;
@@ -54,8 +54,8 @@ body {
     padding: 35px 60px;
 }
 
-.registrybox .sbox {
-    width: 320px;
+.loginbox .sbox {
+    width: 288px;
     height: 290px;
     position: relative;
 }
@@ -71,7 +71,7 @@ body {
     display: block;
     position: absolute;
     right: 20px;
-    bottom: 0px;
+    bottom: 5px;
     color: #000;
     cursor: pointer;
 }
@@ -86,16 +86,18 @@ form input {
     width: 90%;
     border: 1px solid #999;
     height: 35px;
-    margin-bottom: 15px;
     padding-left: 10px;
-    color: #ccc;
 }
 
-form .username {
-    margin: 20px 0 50px 0;
+form span {
+    display: block;
+    width: 90%;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 5px;
 }
 
-form .submit {
+form .button {
     background: orangered;
     color: #fff;
     margin-top: 30px;

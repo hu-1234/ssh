@@ -189,7 +189,7 @@ define([], function() {
 
                 })
                 $solid.hover(function() {
-                    clearInterval(autotimer)
+                    clearTimeout(autotimer);
                 }, function() {
                     autotimer = setInterval(function() {
                         $right.click();
@@ -215,7 +215,7 @@ define([], function() {
                         $str += `
                         <li>
                         <a href="javascript:;">
-                            <img data-original="${value.url}" alt="" class="lazy" width="238"  height="238">
+                            <img src="${value.url}" alt="">
                             <p>${value.title}</p>
                             <div class="money-now">
                                 <span class="now">${value.price}</span>
@@ -228,11 +228,8 @@ define([], function() {
 
                     })
                     $firstBox.html($str);
-                    //懒加载 
-                    $(function() {
-                            $('img.lazy').lazyload({ effect: "fadeIn" });
-                        })
-                        //渲染第二个ul
+
+                    //渲染第二个ul
                     $.each(data.data2, function(index, value) {
                         $arr += `
                         <li>
@@ -255,8 +252,10 @@ define([], function() {
                 const $l = $('.best-sell-box #le');
                 const $r = $('.best-sell-box #ri');
                 const $div = $('.qiehuan div');
+                const $swiperB = $('.swiper-b')
                 const $uls = $('.main-banner ul');
                 const $main = $('.swiper-b .main-banner');
+                let $auttimer = null;
                 let $uwidth = $uls.width();
                 $main.width($uwidth * ($uls.length));
                 let $index1 = 0;
@@ -297,7 +296,16 @@ define([], function() {
                         left: -$index1 * $uwidth
                     })
                 })
-
+                $auttimer = setInterval(function() {
+                    $r.click();
+                }, 3000);
+                $swiperB.hover(function() {
+                    clearTimeout($auttimer);
+                }, function() {
+                    $auttimer = setInterval(function() {
+                        $r.click();
+                    }, 3000);
+                })
 
 
                 // 显示蒙板
@@ -331,7 +339,28 @@ define([], function() {
                         display: 'none'
                     })
                 })
-
+                const $login = $('.login-box');
+                const $s = $('.login-box  .oo');
+                const $o = $('.rnavdiv-first .o');
+                const $quit = $('.login-box .quit');
+                if ($.cookie('username')) {
+                    $o.css({
+                        display: 'none'
+                    })
+                    $login.css({
+                        display: 'block'
+                    })
+                    $s.html($.cookie('username'));
+                }
+                $quit.on('click', function() {
+                    $o.css({
+                        display: 'block'
+                    })
+                    $login.css({
+                        display: 'none'
+                    })
+                    $.cookie('username', null, { expires: -1, path: '/' });
+                })
 
             })(jQuery)
 

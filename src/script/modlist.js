@@ -3,6 +3,43 @@ define(['jquery.pagination'], function() {
         init: function() {
             (function($) {
 
+
+
+                //置顶
+                const $set = $('.right-nav .set');
+                $set.on('click', function() {
+                    $('html, body').animate({
+                        scrollTop: '0px'
+                    }, 'fast')
+                });
+
+
+                // 二级导航
+                const $aLi = $('.navList li');
+                const $hover = $('.nav-hover');
+                $aLi.hover(function() {
+                    $hover.css({
+                        'display': 'block'
+                    })
+                    $hover.hover(function() {
+                        $hover.css({
+                            'display': 'block'
+                        })
+                    }, function() {
+                        $hover.css({
+                            'display': 'none'
+                        })
+                    })
+                }, function() {
+                    $hover.css({
+                        'display': 'none'
+                    })
+                })
+
+
+
+
+
                 // 排序值初始化
                 let $array_defaul = [];
                 let $array = [];

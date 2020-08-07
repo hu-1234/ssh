@@ -2,6 +2,17 @@ define([], function() {
     return {
         init: function() {
             (function($) {
+
+                //置顶
+                const $set = $('.right-nav .set');
+                $set.on('click', function() {
+                    $('html, body').animate({
+                        scrollTop: '0px'
+                    }, 'fast')
+                });
+
+
+
                 if ($.cookie('cookiesid') && $.cookie('cookienum')) {
                     $arrsid = $.cookie('cookiesid').split(',');
                     $arrnum = $.cookie('cookienum').split(',');
@@ -16,14 +27,13 @@ define([], function() {
                         url: 'http://127.0.0.1/practice/BMitem/php/data.php',
                         dataType: 'json',
                     }).done(function(data) {
-                        console.log(data);
                         let $str = '';
                         $.each(data.data3, function(index, value) {
                             if (value.sid === sid) {
                                 $str += `
                             <ul class="goodslist">
                             <li style="width: 62px;padding-top: 50px;">
-                                <input type="checkbox">
+                                <input type="checkbox" class = "check">
                             </li>
                             <li style="width: 350px;" class="imgt">
                                 <div class="imgbox">
@@ -57,9 +67,46 @@ define([], function() {
                     </div>
                             `;
                                 $c.before($str);
+
+                                //设置商品数量和小计
+                                const $xjSpan = $('.goodslist .xj span');
+                                const $numBoxSpan = $('.num-box span');
+                                const $numBoxInput = $('.num-box input');
+                                //点击y右键加
+                                let $sailnumber = $numBoxInput.attr('value');
+                                console.log($sailnumber);
+                                $numBoxSpan.eq(1).on('click', function() {
+                                    $sailnumber++;
+                                    $numBoxInput.attr('value', $sailnumber);
+                                })
+                                $numBoxSpan.eq(0).on('click', function() {
+                                    $sailnumber--;
+                                    if ($sailnumber < 1) {
+                                        $sailnumber = 1
+                                    } else {
+                                        $numBoxInput.attr('value', $sailnumber);
+                                    }
+
+                                })
+
+                                //全选
+                                const $allselect = $('.content-t input');
+
                             }
 
                         })
+
+                        //计算总金额
+                        // const $one = $('.one .hon');
+                        // const $two = $('.two .hon');
+
+
+                        // $xjSpan.each(function() {
+                        //     let sum = 0;
+                        //     let all = parseInt($(this).html().substring(1));
+                        //     sum += all;
+                        // })
+
 
                     })
 
